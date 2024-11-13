@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add note</title>
+    <style>
+      table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.button-52 {
+    background-color: #04AA6D;
+    color: white;
+    padding: 4px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 1200px) {
+    table, td {
+        font-size: 16px;
+    }
+    
+    .button-52 {
+        padding: 4px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    table, td {
+        font-size: 14px;
+    }
+    
+    .button-52 {
+        padding: 4px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    table, td {
+        font-size: 12px;
+    }
+    
+    .button-52 {
+        padding: 4px 14px;
+        font-size: 12px;
+    }
+    
+    /* Responsive table */
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+    
+    td {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    table, td {
+        font-size: 10px;
+    }
+    
+    .button-52 {
+        padding: 4px 12px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 450px) {
+    table, td {
+        font-size: 8px;
+    }
+    
+    .button-52 {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}
+
+    </style>
+<body>
+    <a href="{{url_for('admindash')}}"><button class="button-52">Back</button></a>
+    <center><h1>Products Status</h1></center>
+        <table>
+            
+            <tr>
+                <th>item id</th>
+                <th>name</th>
+                <th>discription</th>
+                <th>quantity</th>
+                <th>category</th>
+                <th>price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            {% for i in items %}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+                <td>{{i[5]}}</td>
+                <td><a href="{{url_for('update',itemid=i[0])}}">Update</a></td>
+                <td><a href="{{url_for('delete',itemid=i[0])}}">Delete</a></td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+       
+        
+</body>
+</html>

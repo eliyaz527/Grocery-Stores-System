@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  width: 40vw;
+  background-image:url('https://youthincmag.com/wp-content/uploads/2018/03/Online-shopping.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.form{
+  padding: 10px 25px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.form h3{
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.fa{
+  color: #7227D5;
+  position: absolute;
+  top: 10px;
+  font-size: 18px;
+}
+
+.input-field{
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.input-field input{
+  display: block; 
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(182, 180, 180);
+  font-size: 15px;
+}
+
+button{
+  height: 45px;
+  background: #7227D5;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button+p{
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+button+p a{
+  text-decoration: none;
+  color: #7227D5;
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 1200px) {
+  body {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    width: 60vw;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 80vw;
+  }
+
+  .form h3 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  button+p {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    width: 90vw;
+  }
+
+  .form h3 {
+    font-size: 22px;
+  }
+
+  .input-field input {
+    padding: 10px 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  button+p {
+    padding-top: 15px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    width: 100vw;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .form h3 {
+    font-size: 20px;
+  }
+
+  .input-field input {
+    padding: 8px 10px;
+  }
+
+  button {
+    font-size: 12px;
+    height: 40px;
+  }
+
+  button+p {
+    padding-top: 10px;
+    font-size: 10px;
+  }
+}

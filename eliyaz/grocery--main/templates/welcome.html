@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#example1 {
+  background-image: url('https://watermark.lovepik.com/photo/40194/8316.jpg_wh1200.jpg');
+  background-size: cover;
+  align-items: center;
+}
+
+.o {
+  background-color: rgb(232, 151, 238);
+  font-size: 50px;
+  margin-top: 1%;
+}
+
+.image {
+  width: 50%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(136, 30, 166, 0.31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40%;
+}
+
+.overlay h3 {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.overlay p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-52 {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 1200px) {
+  .o {
+    font-size: 45px;
+  }
+  
+  .overlay {
+    margin-top: 35%;
+  }
+  
+  .overlay h3 {
+    font-size: 23px;
+  }
+  
+  .overlay p {
+    font-size: 18px;
+  }
+  
+  .button-52 {
+    padding: 9px;
+    font-size: 14px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 991px) {
+  .o {
+    font-size: 40px;
+  }
+  
+  .overlay {
+    margin-top: 30%;
+  }
+  
+  .overlay h3 {
+    font-size: 21px;
+  }
+  
+  .overlay p {
+    font-size: 16px;
+  }
+  
+  .button-52 {
+    padding: 8px;
+    font-size: 13px;
+    margin: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .o {
+    font-size: 35px;
+  }
+  
+  .overlay {
+    margin-top: 25%;
+  }
+  
+  .overlay h3 {
+    font-size: 19px;
+  }
+  
+  .overlay p {
+    font-size: 15px;
+  }
+  
+  .button-52 {
+    padding: 7px;
+    font-size: 12px;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .o {
+    font-size: 30px;
+  }
+  
+  .overlay {
+    margin-top: 20%;
+  }
+  
+  .overlay h3 {
+    font-size: 17px;
+  }
+  
+  .overlay p {
+    font-size: 14px;
+  }
+  
+  .button-52 {
+    padding: 6px;
+    font-size: 11px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .o {
+    font-size: 25px;
+  }
+  
+  .overlay {
+    margin-top: 15%;
+  }
+  
+  .overlay h3 {
+    font-size: 15px;
+  }
+  
+  .overlay p {
+    font-size: 13px;
+  }
+  
+  .button-52 {
+    padding: 5px;
+    font-size: 10px;
+    margin: 4px;
+  }
+}
+
+</style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b style="color:rgb(20, 132, 229);">{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body id="example1">
+<marquee class="o">Welcome to GROCERY website Shop Online .........!</marquee>
+
+<center>
+   
+<div class="container">
+<div class="image">
+    <div class="overlay">
+      <h3>Get Started...!<br>With new Products</h3>
+      <p>Shop Now</p>
+      <a href="{{url_for('home')}}"><button class="button-52">Click To Explore...</button></a>
+    </div>
+  </div>
+</div>
+</center>
+</body>
+</html>
